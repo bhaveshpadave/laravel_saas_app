@@ -21,10 +21,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
             'password' => bcrypt('password'),
+            'available_credits' => 10,
         ]);
 
         Feature::create([
-           'image' => 'https://img.freepik.com/free-photo/international-day-education-futuristic-style_23-2150998750.jpg',
+            'image' => 'https://img.freepik.com/free-photo/international-day-education-futuristic-style_23-2150998750.jpg',
             'route_name' => 'feature1.index',
             'name' => 'Calculate sum',
             'description' => 'Calculate sum of two numbers',

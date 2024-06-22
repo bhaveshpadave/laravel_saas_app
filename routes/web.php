@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Feature1Controller;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,12 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+//Route::get('/feature1', function () {
+//    return Inertia::render('Feature1/Index');
+//})->middleware(['auth', 'verified'])->name('feature1.index');
+
+//Route::get('/feature1', [Feature1Controller::class, 'index']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
